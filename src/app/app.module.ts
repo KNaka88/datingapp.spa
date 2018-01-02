@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AlertifyService } from './_services/alertify.service';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MemberListComponent } from './member-list/member-list.component';
     NavComponent,
     RegisterComponent,
     HomeComponent,
-    MemberListComponent
+    MemberListComponent,
+    ListsComponent
 ],
   imports: [
     BrowserModule,
