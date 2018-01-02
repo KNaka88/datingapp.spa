@@ -12,6 +12,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { MemberListComponent } from './member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListsComponent } from './lists/lists.component';
     RegisterComponent,
     HomeComponent,
     MemberListComponent,
-    ListsComponent
+    ListsComponent,
+    MessagesComponent
 ],
   imports: [
     BrowserModule,
