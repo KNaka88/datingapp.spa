@@ -30,6 +30,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination/pagination.module';
+import { ButtonsModule } from 'ngx-bootstrap/buttons/buttons.module';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination/pagination.module';
     BsDatepickerModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
     AuthService,

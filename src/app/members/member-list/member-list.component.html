@@ -30,20 +30,16 @@
         </div>
         <button type="submit" class="btn btn-primary" style="margin-left:10px">Apply Filters</button>
         <button (click)="resetFilters()" type="button" class="btn btn-info" style="margin-left:10px">Reset Filter</button>
+        <div class="pull-right">
+          <label style="margin-right: 10px">Order By: </label>
+          <div class="btn-group">
+            <button [(ngModel)]="userParams.orderBy" (click)="loadUsers()" type="button" name="orderBy" class="btn btn-primary" btnRadio="lastActive">Last Active</button>
+            <button [(ngModel)]="userParams.orderBy" (click)="loadUsers()" type="button" name="orderBy" class="btn btn-primary" btnRadio="created">Newest Members</button>
+          </div>
+        </div>
       </form>
     </div>
     <br>
-    <!-- HTML for ordering -->
-    <div class="pull-right">
-        <label style="margin-right: 10px">Order By: </label>
-        <div class="btn-group">
-          <button type="button" name="orderBy" class="btn btn-primary" btnRadio="lastActive">Last Active</button>
-          <button type="button" name="orderBy" class="btn btn-primary" btnRadio="created">Newest Members</button>
-        </div>
-      </div>
-  
-  
-
   <div class="row equal">
     <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
       <app-member-card [user]="user"></app-member-card>
