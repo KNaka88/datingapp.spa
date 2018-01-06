@@ -31,6 +31,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination/pagination.module';
 import { ButtonsModule } from 'ngx-bootstrap/buttons/buttons.module';
+import { ListResolver } from './_resolvers/list.resolver';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons/buttons.module';
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
-    PreventUnsavedChanges
+    PreventUnsavedChanges,
+    ListResolver
   ],
   bootstrap: [AppComponent]
 })
