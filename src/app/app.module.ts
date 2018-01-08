@@ -32,6 +32,8 @@ import { FileUploadModule } from 'ng2-file-upload/file-upload/file-upload.module
 import { PaginationModule } from 'ngx-bootstrap/pagination/pagination.module';
 import { ButtonsModule } from 'ngx-bootstrap/buttons/buttons.module';
 import { ListResolver } from './_resolvers/list.resolver';
+import { MessageResolver } from './_resolvers/message.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { ListResolver } from './_resolvers/list.resolver';
     MemberDetailComponent,
     MemberEditComponent,
     PhotoEditorComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    MemberMessagesComponent
 ],
   imports: [
     BrowserModule,
@@ -72,7 +75,8 @@ import { ListResolver } from './_resolvers/list.resolver';
     MemberListResolver,
     MemberEditResolver,
     PreventUnsavedChanges,
-    ListResolver
+    ListResolver,
+    MessageResolver
   ],
   bootstrap: [AppComponent]
 })

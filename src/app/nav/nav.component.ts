@@ -25,6 +25,7 @@ export class NavComponent implements OnInit {
       this.alertify.success('logged in successfully');
     }, error => {
       // error
+      console.log(error);
       this.alertify.error('Failed to login');
     }, () => {
       // complete
