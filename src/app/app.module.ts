@@ -36,14 +36,14 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
-// export function getAccessToken(): string {
-//   return localStorage.getItem('token');
-// }
+export function getAccessToken(): string {
+  return localStorage.getItem('token');
+}
 
-// export const jwtConfig = {
-//   tokenGetter: getAccessToken,
-//   whiteListedDomains: ['localhost:5000']
-// };
+export const jwtConfig = {
+  tokenGetter: getAccessToken,
+  whitelistedDomains: ['localhost:5000']
+};
 
 @NgModule({
   declarations: [
@@ -75,17 +75,8 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
     ButtonsModule.forRoot(),
     HttpClientModule,
     JwtModule.forRoot({
-      config: {
-        tokenGetter: () => {
-          return localStorage.getItem('token');
-        },
-        whitelistedDomains: ['localhost:5000']
-      }
+      config: jwtConfig
     })
-
-    // JwtModule.forRoot({
-    //   config: jwtConfig
-    // })
   ],
   providers: [
     AuthService,
