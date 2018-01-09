@@ -2,7 +2,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxGalleryModule } from 'ngx-gallery';
-import { TimeAgoPipe } from 'time-ago-pipe';
+// import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -35,6 +35,7 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { TimeAgoPipe } from './_pipes/time-ago-pipe';
 
 export function getAccessToken(): string {
   return localStorage.getItem('token');
